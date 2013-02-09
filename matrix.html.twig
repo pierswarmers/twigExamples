@@ -1,0 +1,17 @@
+<ul>
+{% for aKey, aValue in matrix %}
+    <li>
+        {% if aValue is iterable %}
+            Array:
+            <ul>
+            {% for bKey, bValue in aValue %}
+                <li>bValue[{{ bKey }}] {{ bValue }}</li>
+            {% endfor %}
+            </ul>
+        {% else %}
+            {# users is probably a string #}
+            aValue[{{ aKey }}] {{ aValue }}
+        {% endif %}
+    </li>
+{% endfor %}
+</ul>

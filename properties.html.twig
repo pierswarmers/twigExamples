@@ -1,0 +1,16 @@
+<dl>
+    <dt>test_string</dt>
+    <dd>{{ test_string }}</dd>
+    <dt>test_datetime|date</dt>
+    <dd>{{ test_datetime|date }} <span>piped filter handle PHP DateTime</span></dd>
+    <dt>"now"|date(timezone="America/Los_Angeles", 'd/m/Y H:i')</dt>
+    <dd>{{ "now"|date(timezone="America/Los_Angeles", 'd/m/Y H:i') }}</dd>
+    <dt>test_object.name</dt>
+    <dd>{{ test_object.name }} <span>Twig goes looking for getName() since there is no public property 'name'</span></dd>
+    <dt>test_object.getName</dt>
+    <dd>{{ test_object.getName }}</dd>
+    <dt>test_object</dt>
+    <dd>{{ test_object }} <span>because of __toString()</span></dd>
+    <dt>test_array.name</dt>
+    <dd>{{ test_array.name }}</dd>
+</dl>

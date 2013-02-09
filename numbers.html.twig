@@ -1,0 +1,7 @@
+<ul>
+    {% if numbers|length > 0 %}
+        {% for key, value in numbers %}
+            <li>{{ key }} - {{ value }}</li>
+        {% endfor %}
+    {% endif %}
+</ul>

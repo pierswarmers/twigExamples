@@ -1,0 +1,36 @@
+{% extends 'layout.html.twig' %}
+
+{% block title 'Examples for ' ~ name %}
+
+{% block content %}
+
+    {% include 'properties.html.twig' %}
+
+    <h2>Looping Simple Array: Example 1</h2>
+
+    <ul>
+    {% if people|length > 0 %}
+        {% for key, value in people %}
+            <li>{{ key }} - {{ value }}</li>
+        {% endfor %}
+    {% endif %}
+    </ul>
+
+    <h2>Looping Simple Array: Example 2</h2>
+
+    {% include 'numbers.html.twig' %}
+
+    <h2>Looping Complex Array: Example 1</h2>
+
+    {% include 'matrix.html.twig' %}
+
+    <h2>Testing</h2>
+
+    <dl>
+        <dt>dump(test_object)</dt>
+        <dd>{{ dump(test_object) }}</dd>
+        <dt>dump(_context)</dt>
+        <dd>{{ dump(_context) }}</dd>
+    </dl>
+
+{% endblock %}
