@@ -3,7 +3,7 @@ Installation
 
 Clone this project:
 
-Clone the project: `git clone -- twiggy; cd twiggy`
+Clone the project: `git clone git://github.com/pierswarmers/twigExamples.git twiggy; cd twiggy`
 
 Download composer: `curl -s https://getcomposer.org/installer | php`
 
